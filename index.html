@@ -20,6 +20,7 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            padding: 20px;
         }
         h1 {
             font-size: 4em;
@@ -80,12 +81,43 @@
             font-size: 1em;
             color: #bbb;
         }
+        .consultancy {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: left;
+        }
+        .consultancy p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        .consultancy i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .animation {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            animation: iconTransition 6s infinite alternate;
+        }
+        @keyframes iconTransition {
+            0% { background: url('https://cdn-icons-png.flaticon.com/512/1828/1828874.png') no-repeat center/cover; }
+            100% { background: url('https://cdn-icons-png.flaticon.com/512/732/732229.png') no-repeat center/cover; }
+        }
     </style>
 </head>
 <body>
+    <div class="consultancy">
+        <p><i class="fas fa-envelope"></i> redomarjobs@gmail.com</p>
+        <p><i class="fas fa-phone"></i> </p>
+    </div>
     <div class="container">
+        <div class="animation"></div>
         <h1>Omar Osman</h1>
-        <p>SCCM & Intune Administrator | IT Systems Expert.</p>
+        <p>SCCM & Intune Administrator | IT Systems Expert</p>
         <div class="clock" id="clock"></div>
         <div class="links">
             <a href="https://github.com/thekingsmakers" target="_blank">GitHub</a>
@@ -104,27 +136,24 @@
                 <li><strong>Wallpaper Deployment Tool</strong> - Deploys custom wallpapers across devices through Intune, ensuring branding consistency across the enterprise.</li>
                 <li><strong>Camera Restriction by Geolocation</strong> - A PowerShell script that disables or enables device cameras based on geographic location.</li>
                 <li><strong>Trust Relationship Fixer</strong> - A script deployed via Intune that restores domain trust relationships, preventing costly reimaging or device recovery operations.</li>
-                <li><strong>Conditional Access Policies</strong> - I have implemented and enforced numerous Conditional Access Policies to secure enterprise data, ensuring compliance with MFA, device health checks, and geofencing measures.</li>
-                <li><strong>Intune Application Deployment</strong> - Experience deploying and managing Win32 and Line-of-Business apps, leveraging Intune for seamless software distribution across diverse endpoints.</li>
-                <li><strong>SCCM Patch Management</strong> - Created automation scripts for patch deployment, compliance reporting, and remediation of failed deployments, reducing system vulnerabilities across the network.</li>
-                <li><strong>Endpoint Security Configurations</strong> - Developed PowerShell scripts to configure Defender ATP policies, restrict USB usage, and manage firewall settings across endpoints.</li>
+                <li><strong>Conditional Access Policies</strong> - Implemented secure Conditional Access Policies for enterprise data, including MFA, device compliance checks, and geofencing.</li>
+                <li><strong>Software Deployment</strong> - Automated deployment of enterprise applications using SCCM and Intune, reducing manual overhead and increasing efficiency.</li>
             </ul>
         </div>
         <div class="footer">
-            <p>For more of my scripts and solutions, please follow me on <a href="https://github.com/thekingsmakers" target="_blank">GitHub</a> and <a href="https://twitter.com/thekingsmakers" target="_blank">Twitter</a>.</p>
+            <p>For consultancy and expertise on MDM and MAM, contact me at <strong>redomarjobs@gmail.com</strong> or <strong>+97455102655</strong>.</p>
+            <p>Follow me on <a href="https://github.com/thekingsmakers" target="_blank">GitHub</a> and <a href="https://twitter.com/thekingsmakers" target="_blank">Twitter</a>.</p>
             <p>&copy; 2024 The Kingsmakers</p>
         </div>
     </div>
 
     <script>
-        // Dynamic background shift
         let hue = 0;
         setInterval(() => {
             hue += 1;
             document.body.style.background = `linear-gradient(135deg, hsl(${hue}, 50%, 15%), hsl(${hue + 60}, 40%, 20%))`;
         }, 100);
 
-        // Live clock
         function updateClock() {
             const clock = document.getElementById('clock');
             const now = new Date();
