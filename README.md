@@ -25,3 +25,4 @@ Thank you for visiting Intune Scripts by TheKingsMakers. Let's build better Intu
 
 TheKingsMakers Team
 
+Twitter: https://x.com/thekingsmakers
